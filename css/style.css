@@ -97,7 +97,7 @@ header nav ul li:hover {
 
 /*** HERO *****************/
 #hero-section .hero {
-  background: url("../../assets/img/instruments.jpg");
+  background: url("../assets/img/instruments.jpg");
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
