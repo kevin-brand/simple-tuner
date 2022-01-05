@@ -44,7 +44,7 @@ async function setup() {
     audioContext = new AudioContext();
     
     /**fetch midi to key json */
-    let response = await fetch('../assets/piano_midi_keys.json');
+    let response = await fetch('./assets/piano_midi_keys.json');
     pianoMidiKeys = await response.json();
     pianoMidiKeys = pianoMidiKeys.reverse();
 
@@ -82,7 +82,7 @@ function startTuner() {
 // Initialises the ml5.js pitch detection
 function initPitchDetection(stream, audioContext) {
     pitch = ml5.pitchDetection(
-        '../assets/model/',
+        './assets/model/',
         audioContext,
         stream,
         onModelLoaded
