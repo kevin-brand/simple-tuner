@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script defer src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+    <script defer type="text/javascript" src="./src/pitch.js"></script>
+    <script defer type="text/javascript" src="./src/index.js"></script>
+
+    <link href="./css/style.css" rel="stylesheet" />
+    <title>Simple Tuner</title>
+  </head>
+  <body>
+
+    <!--HEADER ------------------------------------------------------------->
+    <header>
+      <nav class="nav-list">
+        <div class="hamburger"><div class="bar"></div></div>
+        <ul>
+          <li><a href="#hero-section">Home</a></li>
+          <li><a href="#tuner-section">Tuner</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!--HERO ------------------------------------------------------------->
+    <section id="hero-section">
+      <div class="hero container">
+        <div class="hero-text">
+          <h1>Simple Tuner - Powered by ML5.js</h1>
+          <h2>Simply Tune Your Instruments</h2>
+        </div>
+      </div>
+    </section>
+
+    <!--TUNER ------------------------------------------------------------->
+    <section id="tuner-section">
+      <div class="tuner container">
+        <h3>Tuner</h1>
+        <div class="tuner-bottom">
+          <div class="left tuner-bottom-col">
+            <h4>Settings</h2>
+              <div class="select-option">
+                <label for="target-note-selection">Target Note:</label>
+                <select id="target-note-selection" name="target-note-selection">
+                  <option value="C">C</option>
+                  <option value="C#">C#</option>
+                  <option value="D">D</option>
+                  <option value="D#">D#</option>
+                  <option value="E">E</option>
+                  <option value="F">F</option>
+                  <option value="F#">F#</option>
+                  <option value="G">G</option>
+                  <option value="G#">G#</option>
+                  <option value="A">A</option>
+                  <option value="A#">A#</option>
+                  <option value="B">B</option>
+                </select>
+              </div>
+  
+              <div class="select-option">
+                <label for="target-octave-selection">Target Octave: </label>
+                <select id="target-octave-selection" name="target-octave-selection">
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                </select>
+              </div>
+              
+              <button type="button" class="cta" id="tuner-start-button">Start Tuner</button>
+          </div>
+          
+          <div class="right tuner-bottom-col">
+            <canvas id="tuner-canvas"></canvas>
+          </div>
+        </div>    
+      </div>
+    </section>
+
+    <!--FOOTER ------------------------------------------------------------->
+    <footer>
+      <p>Kevin Brand (uffmu 2115628)</p>
+    </footer>
+  </body>
+</html>

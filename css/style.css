@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Roboto:wght@500&display=swap');
+
+
+/*** GENERAL *****************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  text-align: center;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, a {
+  text-transform: uppercase;
+  color: #494949;
+}
+
+h3 {
+  font-size: 40px;
+  padding-top: 8%;
+  margin-bottom: 5px;
+}
+
+h4, p, label, select {
+  font-family: 'Roboto Slab', serif;
+  color: #494949;
+}
+
+hr {
+  width: 30px;
+  height: 3px;
+  background: #494949;
+  border: none;
+  margin: 0 auto 0 auto;
+}
+
+section {
+  min-height: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+/*** HEADER *****************/
+header {
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #494949;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+header nav {
+  float: right;
+  margin: 10px 50px 0 0;
+}
+
+header nav ul li {
+  float: left;
+  margin-right: 16px;
+  transition: padding 300ms ease;
+}
+
+header nav ul li a {
+  font-size: 16px;
+  color: white;
+}
+
+header nav ul li:hover {
+  padding-top: 5px;
+}
+
+.container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*** HERO *****************/
+#hero-section .hero {
+  background: url("../../assets/img/instruments.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#hero-section .hero-text {
+  width: 90%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+#hero-section h2 {
+  margin: 10px 0 40px;
+  font-size: 48px;
+}
+
+
+/*** TUNER *****************/
+#tuner-section .tuner {
+  flex-direction: column;
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+
+#tuner-section .tuner-bottom {
+  display: flex;
+  flex-direction: row;
+}
+
+#tuner-section .tuner-bottom-col {
+  flex-basis: 48%;
+}
+
+
+#tuner-section h4 {
+  font-size: 24px;
+}
+
+#tuner-section select {
+  border: none;
+  font-size: 1rem;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 300ms ease;
+}
+
+#tuner-section select:hover {
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+#tuner-section .left {
+  display: flex;
+  justify-content: flex-start;
+  padding: 10px;
+  margin: 0px 10px 0px 10px;
+  border: 3px solid black;
+  align-items: center;
+  align-content: space-between;
+  flex-direction: column;
+  width: 50%;
+  height: 50%;
+}
+
+#tuner-section .right {
+  display: flex;
+  align-content: center;
+  border: 3px solid black;
+  width: 50%;
+}
+
+#tuner-section .right canvas {
+  width: 100%;
+  height: 100%;
+}
+
+#tuner-section .left .select-option {
+  margin: 10px 0px 10px 0px;
+}
+
+#tuner-section .cta {
+  margin-top: 90px;
+  display: inline-block;
+  padding: 10px 30px;
+  color: #494949;
+  background-color: transparent;
+  border: 2px solid #494949;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  transition: .3s ease;
+}
+
+#tuner-section .cta:hover {
+  color: white;
+  background-color: #494949;
+}
+
+
+/*** FOOTER *****************/
+footer {
+  width: 100%;
+  height: 70px;
+  background-color: #494949;
+}
+
+footer p {
+  font-size: 16px;
+  color: #f0f0f0;
+  padding-top: 30px;
+}
+
+
+/*** MOBILE RESPONSIVENESS *****************/
+@media only screen and (max-width: 700px) {
+
+  /*** SIDE NAV + HAMBURGER*****************/
+  header {
+    background: transparent;
+    box-shadow: none;
+  }
+
+  header nav {
+    margin: 0;
+  }
+
+  header .nav-list ul {
+    list-style: none;
+    position: absolute;
+    background-color: #494949;
+    width: 100vw;
+    height: 100vh;
+    left: 100%;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    overflow-x: hidden;
+    flex-direction: column;
+    transition: 0.3s ease left;
+  }
+
+  header .nav-list ul.active {
+    left: 0;
+  }
+
+  header .nav-list ul a {
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: white;
+    letter-spacing: .2rem;
+    padding: 20px;
+    display: block;
+  }
+
+  header .hamburger {
+    z-index: 10000;
+    height: 60px;
+    width: 60px;
+    display: inline-block;
+    border: 3px solid #494949;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    transform: scale(0.8);
+  }
+
+  header .hamburger.active {
+    border: 3px solid white;
+  }
+
+  header .hamburger .bar {
+    height: 2px;
+    width: 30px;
+    position: relative;
+    background-color: #494949;
+  }
+
+  header .hamburger .bar::after,
+  header .hamburger .bar::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    background-color: #494949;
+    transition: 0.3s ease;
+    transition-property: top, bottom;
+  }
+
+  header .hamburger .bar::after {
+    top: 8px;
+  }
+
+  header .hamburger .bar::before {
+    bottom: 8px;
+  }
+
+  header .hamburger.active .bar::before {
+    bottom: 0;
+    background-color: white;
+  }
+
+  header .hamburger.active .bar::after {
+    top: 0;
+    background-color: white;
+  }
+
+  /*** CORRECTIONS FOR HERO *****************/
+  #hero-section h2 {
+    font-size: 32px;
+  }
+
+  #hero-section h1 {
+    font-size: 16px;
+  }
+
+  #tuner-section .right {
+    width: 100%;
+    margin-top: 5px;
+  }
+
+  #tuner-section .left {
+    width: 100%;
+  }
+
+
+  /*** CORRECTIONS FOR TUNER *****************/
+  #tuner-section .tuner {
+    align-items: center;
+  }
+
+  #tuner-section .tuner-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #tuner-section .tuner-bottom-col {
+    flex-basis: 48%;
+  }
+}

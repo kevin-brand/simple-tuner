@@ -1,0 +1,530 @@
+[
+    {
+        "midiNoteNumber": "108",
+        "pianoKeyNumber": "88",
+        "noteName": "C8",
+        "frequency": "4186.01"
+    },
+    {
+        "midiNoteNumber": "107",
+        "pianoKeyNumber": "87",
+        "noteName": "B7",
+        "frequency": "3951.07"
+    },
+    {
+        "midiNoteNumber": "106",
+        "pianoKeyNumber": "86",
+        "noteName": "A#7/Bb7",
+        "frequency": "3729.31"
+    },
+    {
+        "midiNoteNumber": "105",
+        "pianoKeyNumber": "85",
+        "noteName": "A7",
+        "frequency": "3520.00"
+    },
+    {
+        "midiNoteNumber": "104",
+        "pianoKeyNumber": "84",
+        "noteName": "G#7/Ab7",
+        "frequency": "3322.44"
+    },
+    {
+        "midiNoteNumber": "103",
+        "pianoKeyNumber": "83",
+        "noteName": "G7",
+        "frequency": "3135.96"
+    },
+    {
+        "midiNoteNumber": "102",
+        "pianoKeyNumber": "82",
+        "noteName": "F#7/Gb7",
+        "frequency": "2959.96"
+    },
+    {
+        "midiNoteNumber": "101",
+        "pianoKeyNumber": "81",
+        "noteName": "F7",
+        "frequency": "2793.83"
+    },
+    {
+        "midiNoteNumber": "100",
+        "pianoKeyNumber": "80",
+        "noteName": "E7",
+        "frequency": "2637.02"
+    },
+    {
+        "midiNoteNumber": "99",
+        "pianoKeyNumber": "79",
+        "noteName": "D#7/Eb7",
+        "frequency": "2489.02"
+    },
+    {
+        "midiNoteNumber": "98",
+        "pianoKeyNumber": "78",
+        "noteName": "D7",
+        "frequency": "2349.32"
+    },
+    {
+        "midiNoteNumber": "97",
+        "pianoKeyNumber": "77",
+        "noteName": "C#7/Db7",
+        "frequency": "2217.46"
+    },
+    {
+        "midiNoteNumber": "96",
+        "pianoKeyNumber": "76",
+        "noteName": "C7",
+        "frequency": "2093.00"
+    },
+    {
+        "midiNoteNumber": "95",
+        "pianoKeyNumber": "75",
+        "noteName": "B6",
+        "frequency": "1975.53"
+    },
+    {
+        "midiNoteNumber": "94",
+        "pianoKeyNumber": "74",
+        "noteName": "A#6/Bb6",
+        "frequency": "1864.66"
+    },
+    {
+        "midiNoteNumber": "93",
+        "pianoKeyNumber": "73",
+        "noteName": "A6",
+        "frequency": "1760.00"
+    },
+    {
+        "midiNoteNumber": "92",
+        "pianoKeyNumber": "72",
+        "noteName": "G#6/Ab6",
+        "frequency": "1661.22"
+    },
+    {
+        "midiNoteNumber": "91",
+        "pianoKeyNumber": "71",
+        "noteName": "G6",
+        "frequency": "1567.98"
+    },
+    {
+        "midiNoteNumber": "90",
+        "pianoKeyNumber": "70",
+        "noteName": "F#6/Gb6",
+        "frequency": "1479.98"
+    },
+    {
+        "midiNoteNumber": "89",
+        "pianoKeyNumber": "69",
+        "noteName": "F6",
+        "frequency": "1396.91"
+    },
+    {
+        "midiNoteNumber": "88",
+        "pianoKeyNumber": "68",
+        "noteName": "E6",
+        "frequency": "1318.51"
+    },
+    {
+        "midiNoteNumber": "87",
+        "pianoKeyNumber": "67",
+        "noteName": "D#6/Eb6",
+        "frequency": "1244.51"
+    },
+    {
+        "midiNoteNumber": "86",
+        "pianoKeyNumber": "66",
+        "noteName": "D6",
+        "frequency": "1174.66"
+    },
+    {
+        "midiNoteNumber": "85",
+        "pianoKeyNumber": "65",
+        "noteName": "C#6/Db6",
+        "frequency": "1108.73"
+    },
+    {
+        "midiNoteNumber": "84",
+        "pianoKeyNumber": "64",
+        "noteName": "C6",
+        "frequency": "1046.50"
+    },
+    {
+        "midiNoteNumber": "83",
+        "pianoKeyNumber": "63",
+        "noteName": "B5",
+        "frequency": "987.77"
+    },
+    {
+        "midiNoteNumber": "82",
+        "pianoKeyNumber": "62",
+        "noteName": "A#5/Bb5",
+        "frequency": "932.33"
+    },
+    {
+        "midiNoteNumber": "81",
+        "pianoKeyNumber": "61",
+        "noteName": "A5",
+        "frequency": "880.00"
+    },
+    {
+        "midiNoteNumber": "80",
+        "pianoKeyNumber": "60",
+        "noteName": "G#5/Ab5",
+        "frequency": "830.61"
+    },
+    {
+        "midiNoteNumber": "79",
+        "pianoKeyNumber": "59",
+        "noteName": "G5",
+        "frequency": "783.99"
+    },
+    {
+        "midiNoteNumber": "78",
+        "pianoKeyNumber": "58",
+        "noteName": "F#5/Gb5",
+        "frequency": "739.99"
+    },
+    {
+        "midiNoteNumber": "77",
+        "pianoKeyNumber": "57",
+        "noteName": "F5",
+        "frequency": "698.46"
+    },
+    {
+        "midiNoteNumber": "76",
+        "pianoKeyNumber": "56",
+        "noteName": "E5",
+        "frequency": "659.26"
+    },
+    {
+        "midiNoteNumber": "75",
+        "pianoKeyNumber": "55",
+        "noteName": "D#5/Eb5",
+        "frequency": "622.25"
+    },
+    {
+        "midiNoteNumber": "74",
+        "pianoKeyNumber": "54",
+        "noteName": "D5",
+        "frequency": "587.33"
+    },
+    {
+        "midiNoteNumber": "73",
+        "pianoKeyNumber": "53",
+        "noteName": "C#5/Db5",
+        "frequency": "554.37"
+    },
+    {
+        "midiNoteNumber": "72",
+        "pianoKeyNumber": "52",
+        "noteName": "C5",
+        "frequency": "523.25"
+    },
+    {
+        "midiNoteNumber": "71",
+        "pianoKeyNumber": "51",
+        "noteName": "B4",
+        "frequency": "493.88"
+    },
+    {
+        "midiNoteNumber": "70",
+        "pianoKeyNumber": "50",
+        "noteName": "A#4/Bb4",
+        "frequency": "466.16"
+    },
+    {
+        "midiNoteNumber": "69",
+        "pianoKeyNumber": "49",
+        "noteName": "A4",
+        "frequency": "440.00"
+    },
+    {
+        "midiNoteNumber": "68",
+        "pianoKeyNumber": "48",
+        "noteName": "G#4/Ab4",
+        "frequency": "415.30"
+    },
+    {
+        "midiNoteNumber": "67",
+        "pianoKeyNumber": "47",
+        "noteName": "G4",
+        "frequency": "392.00"
+    },
+    {
+        "midiNoteNumber": "66",
+        "pianoKeyNumber": "46",
+        "noteName": "F#4/Gb4",
+        "frequency": "369.99"
+    },
+    {
+        "midiNoteNumber": "65",
+        "pianoKeyNumber": "45",
+        "noteName": "F4",
+        "frequency": "349.23"
+    },
+    {
+        "midiNoteNumber": "64",
+        "pianoKeyNumber": "44",
+        "noteName": "E4",
+        "frequency": "329.63"
+    },
+    {
+        "midiNoteNumber": "63",
+        "pianoKeyNumber": "43",
+        "noteName": "D#4/Eb4",
+        "frequency": "311.13"
+    },
+    {
+        "midiNoteNumber": "62",
+        "pianoKeyNumber": "42",
+        "noteName": "D4",
+        "frequency": "293.66"
+    },
+    {
+        "midiNoteNumber": "61",
+        "pianoKeyNumber": "41",
+        "noteName": "C#4/Db4",
+        "frequency": "277.18"
+    },
+    {
+        "midiNoteNumber": "60",
+        "pianoKeyNumber": "40",
+        "noteName": "C4 (middle C)",
+        "frequency": "261.63"
+    },
+    {
+        "midiNoteNumber": "59",
+        "pianoKeyNumber": "39",
+        "noteName": "B3",
+        "frequency": "246.94"
+    },
+    {
+        "midiNoteNumber": "58",
+        "pianoKeyNumber": "38",
+        "noteName": "A#3/Bb3",
+        "frequency": "233.08"
+    },
+    {
+        "midiNoteNumber": "57",
+        "pianoKeyNumber": "37",
+        "noteName": "A3",
+        "frequency": "220.00"
+    },
+    {
+        "midiNoteNumber": "56",
+        "pianoKeyNumber": "36",
+        "noteName": "G#3/Ab3",
+        "frequency": "207.65"
+    },
+    {
+        "midiNoteNumber": "55",
+        "pianoKeyNumber": "35",
+        "noteName": "G3",
+        "frequency": "196.00"
+    },
+    {
+        "midiNoteNumber": "54",
+        "pianoKeyNumber": "34",
+        "noteName": "F#3/Gb3",
+        "frequency": "185.00"
+    },
+    {
+        "midiNoteNumber": "53",
+        "pianoKeyNumber": "33",
+        "noteName": "F3",
+        "frequency": "174.61"
+    },
+    {
+        "midiNoteNumber": "52",
+        "pianoKeyNumber": "32",
+        "noteName": "E3",
+        "frequency": "164.81"
+    },
+    {
+        "midiNoteNumber": "51",
+        "pianoKeyNumber": "31",
+        "noteName": "D#3/Eb3",
+        "frequency": "155.56"
+    },
+    {
+        "midiNoteNumber": "50",
+        "pianoKeyNumber": "30",
+        "noteName": "D3",
+        "frequency": "146.83"
+    },
+    {
+        "midiNoteNumber": "49",
+        "pianoKeyNumber": "29",
+        "noteName": "C#3/Db3",
+        "frequency": "138.59"
+    },
+    {
+        "midiNoteNumber": "48",
+        "pianoKeyNumber": "28",
+        "noteName": "C3",
+        "frequency": "130.81"
+    },
+    {
+        "midiNoteNumber": "47",
+        "pianoKeyNumber": "27",
+        "noteName": "B2",
+        "frequency": "123.47"
+    },
+    {
+        "midiNoteNumber": "46",
+        "pianoKeyNumber": "26",
+        "noteName": "A#2/Bb2",
+        "frequency": "116.54"
+    },
+    {
+        "midiNoteNumber": "45",
+        "pianoKeyNumber": "25",
+        "noteName": "A2",
+        "frequency": "110.00"
+    },
+    {
+        "midiNoteNumber": "44",
+        "pianoKeyNumber": "24",
+        "noteName": "G#2/Ab2",
+        "frequency": "103.83"
+    },
+    {
+        "midiNoteNumber": "43",
+        "pianoKeyNumber": "23",
+        "noteName": "G2",
+        "frequency": "98.00"
+    },
+    {
+        "midiNoteNumber": "42",
+        "pianoKeyNumber": "22",
+        "noteName": "F#2/Gb2",
+        "frequency": "92.50"
+    },
+    {
+        "midiNoteNumber": "41",
+        "pianoKeyNumber": "21",
+        "noteName": "F2",
+        "frequency": "87.31"
+    },
+    {
+        "midiNoteNumber": "40",
+        "pianoKeyNumber": "20",
+        "noteName": "E2",
+        "frequency": "82.41"
+    },
+    {
+        "midiNoteNumber": "39",
+        "pianoKeyNumber": "19",
+        "noteName": "D#2/Eb2",
+        "frequency": "77.78"
+    },
+    {
+        "midiNoteNumber": "38",
+        "pianoKeyNumber": "18",
+        "noteName": "D2",
+        "frequency": "73.42"
+    },
+    {
+        "midiNoteNumber": "37",
+        "pianoKeyNumber": "17",
+        "noteName": "C#2/Db2",
+        "frequency": "69.30"
+    },
+    {
+        "midiNoteNumber": "36",
+        "pianoKeyNumber": "16",
+        "noteName": "C2",
+        "frequency": "65.41"
+    },
+    {
+        "midiNoteNumber": "35",
+        "pianoKeyNumber": "15",
+        "noteName": "B1",
+        "frequency": "61.74"
+    },
+    {
+        "midiNoteNumber": "34",
+        "pianoKeyNumber": "14",
+        "noteName": "A#1/Bb1",
+        "frequency": "58.27"
+    },
+    {
+        "midiNoteNumber": "33",
+        "pianoKeyNumber": "13",
+        "noteName": "A1",
+        "frequency": "55.00"
+    },
+    {
+        "midiNoteNumber": "32",
+        "pianoKeyNumber": "12",
+        "noteName": "G#1/Ab1",
+        "frequency": "51.91"
+    },
+    {
+        "midiNoteNumber": "31",
+        "pianoKeyNumber": "11",
+        "noteName": "G1",
+        "frequency": "49.00"
+    },
+    {
+        "midiNoteNumber": "30",
+        "pianoKeyNumber": "10",
+        "noteName": "F#1/Gb1",
+        "frequency": "46.25"
+    },
+    {
+        "midiNoteNumber": "29",
+        "pianoKeyNumber": "9",
+        "noteName": "F1",
+        "frequency": "43.65"
+    },
+    {
+        "midiNoteNumber": "28",
+        "pianoKeyNumber": "8",
+        "noteName": "E1",
+        "frequency": "41.20"
+    },
+    {
+        "midiNoteNumber": "27",
+        "pianoKeyNumber": "7",
+        "noteName": "D#1/Eb1",
+        "frequency": "38.89"
+    },
+    {
+        "midiNoteNumber": "26",
+        "pianoKeyNumber": "6",
+        "noteName": "D1",
+        "frequency": "36.71"
+    },
+    {
+        "midiNoteNumber": "25",
+        "pianoKeyNumber": "5",
+        "noteName": "C#1/Db1",
+        "frequency": "34.65"
+    },
+    {
+        "midiNoteNumber": "24",
+        "pianoKeyNumber": "4",
+        "noteName": "C1",
+        "frequency": "32.70"
+    },
+    {
+        "midiNoteNumber": "23",
+        "pianoKeyNumber": "3",
+        "noteName": "B0",
+        "frequency": "30.87"
+    },
+    {
+        "midiNoteNumber": "22",
+        "pianoKeyNumber": "2",
+        "noteName": "A#0/Bb0",
+        "frequency": "29.14"
+    },
+    {
+        "midiNoteNumber": "21",
+        "pianoKeyNumber": "1",
+        "noteName": "A0",
+        "frequency": "27.50"
+    }
+]
