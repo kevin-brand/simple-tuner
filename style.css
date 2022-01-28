@@ -83,10 +83,6 @@ hr {
   margin: 0 auto 0 auto;
 }
 
-section {
-  min-height: 100%;
-}
-
 a {
   text-decoration: none;
 }
@@ -103,11 +99,43 @@ li {
   justify-content: center;
 }
 
+.cta {
+
+  display: inline-block;
+  padding: 10px 30px;
+  color: #494949;
+  background-color: transparent;
+  border: 2px solid #494949;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  transition: .3s ease;
+}
+
+.cta:hover {
+  color: white;
+  background-color: #494949;
+  cursor: pointer;
+}
+
+.section-title {
+  font-size: 4rem;
+  font-weight: 300;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+  text-align: center;
+}
+
+.section-title span {
+  color: var(--color-primary);
+}
+
 /*** HEADER *****************/
 #header {
   position: fixed;
   width: 100vw;
-  height: auto;
+  height: 6vh;
   top: 0;
   left: 0;
   z-index: 1000;
@@ -159,12 +187,31 @@ li {
   display: none;
 }
 
+.color-shift {
+  color: white;
+  animation: color_shift_primary ease 0.5s forwards;
+  animation-delay: 0.5s;
+}
+
 /*** HERO *****************/
 #hero-section .hero {
+  z-index: 1;
+}
+
+#hero-section .background-image {
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-filter: blur(0px);
+  filter: blur(0px);
   background: url("../assets/img/instruments.jpg");
-  background-position: center;
+  background-position: top center;
   background-size: cover;
   background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 
 #hero-section .hero-text {
@@ -174,13 +221,26 @@ li {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+  background-color: rgba(0,0,0, 0.4);
+  border: 3px solid var(--color-white);
+  padding: var(--card-padding);
+  max-width: 1200px;
+}
+
+#hero-section h1 {
+  margin: 10px 0 40px;
+  font-size: 48px;
+  color: var(--color-white);
 }
 
 #hero-section h2 {
-  margin: 10px 0 40px;
-  font-size: 48px;
+  font-weight: 300;
+  color: var(--color-white);
 }
 
+#hero-section .cta {
+  margin-top: 280px;
+}
 
 /*** TUNER *****************/
 #tuner-section .tuner {
@@ -243,24 +303,6 @@ li {
 
 #tuner-section .left .select-option {
   margin: 10px 0px 10px 0px;
-}
-
-#tuner-section .cta {
-  margin-top: 90px;
-  display: inline-block;
-  padding: 10px 30px;
-  color: #494949;
-  background-color: transparent;
-  border: 2px solid #494949;
-  font-size: 1.4rem;
-  text-transform: uppercase;
-  letter-spacing: .1rem;
-  transition: .3s ease;
-}
-
-#tuner-section .cta:hover {
-  color: white;
-  background-color: #494949;
 }
 
 
@@ -378,11 +420,11 @@ footer p {
   }
 
   /*** CORRECTIONS FOR HERO *****************/
-  #hero-section h2 {
+  #hero-section h1 {
     font-size: 32px;
   }
 
-  #hero-section h1 {
+  #hero-section h2 {
     font-size: 16px;
   }
 
@@ -409,5 +451,17 @@ footer p {
   
   #tuner-section .tuner-bottom-col {
     flex-basis: 48%;
+  }
+}
+
+@media only screen and (max-width: 290px) {
+  #hero-section .cta {
+    margin-top: 300px;
+  }
+}
+
+@keyframes color_shift_primary {
+  100% {
+      color:var(--color-primary);
   }
 }
