@@ -24,10 +24,16 @@ let targetNoteFrequency = 0;
 let distance = 0;
 let offset = 0;
 
+let startDelayInMS = 3000;
+let isLoading = true;
+
+//get DPI
+let dpi = window.devicePixelRatio;
 
 // Perform setup once DOM is fully loaded
 document.addEventListener('DOMContentLoaded', (event) => {
     setup();
+    fixDPI();
 });
 
 
@@ -56,6 +62,10 @@ async function setup() {
 
 // Start the tuning process
 function startTuner() {
+    // Give tuner enough time to init
+    setTimeout(function(){
+        setLoadingDone();
+    }, startDelayInMS);
 
     // Find target Note Frequency
     pianoMidiKeys.forEach(pianoMidiKey => {
@@ -137,18 +147,36 @@ function drawTuner() {
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
     ctx.font = "48px Roboto";
-  
-    // Gives feedback to the user that the tone is close enough. Could be tweeked
-    if (Math.abs(offset) < 0.3)
-        ctx.fillStyle = "chartreuse";
-    else 
-        ctx.fillStyle = "white";
 
-    ctx.fillText(offset.toString(), canvas.width / 2, canvas.height / 2);
+    if (isLoading) {
+        ctx.fillText("LOADING", canvas.width / 2, canvas.height / 2);
+    } else {
+        let strokeStyle = (Math.abs(offset) < 0.3) ? "chartreuse" : "#494949";
+        let fillStyle = (Math.abs(offset) < 0.3) ? "chartreuse" : "white";
 
-    ctx.strokeStyle = "#494949";
-    ctx.linewidth = 5;
-    ctx.strokeText(offset.toString(), canvas.width / 2, canvas.height / 2);
+        ctx.fillStyle = fillStyle;
+        ctx.strokeStyle = strokeStyle;
+        ctx.linewidth = 5;
+
+        ctx.fillText(offset.toString(), canvas.width / 2, canvas.height / 2);
+        ctx.strokeText(offset.toString(), canvas.width / 2, canvas.height / 2);
+    }
+}
+
+function fixDPI() {
+    //get CSS height
+    //the + prefix casts it to an integer
+    //the slice method gets rid of "px"
+    let style_height = +getComputedStyle(canvas).getPropertyValue("height").slice(0, -2);
+    //get CSS width
+    let style_width = +getComputedStyle(canvas).getPropertyValue("width").slice(0, -2);
+    //scale the canvas
+    canvas.setAttribute('height', style_height * dpi);
+    canvas.setAttribute('width', style_width * dpi);
+}
+
+function setLoadingDone() {
+    isLoading = false;
 }
 
 // Calculates cents between current midi note and target note
