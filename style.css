@@ -246,9 +246,9 @@ li {
 #tuner-section .tuner {
   flex-direction: column;
   text-align: center;
-  width: 80%;
   margin: 0 auto;
   padding: 50px 0;
+  max-width: 1200px;
 }
 
 #tuner-section .tuner-bottom {
@@ -268,12 +268,21 @@ li {
 
 
 #tuner-section h4 {
+  font-size: 3rem;
+}
+
+#tuner-section label {
+  font-size: 2rem;
+}
+
+#tuner-section .cta {
+  margin-top: 100px;
   font-size: 2rem;
 }
 
 #tuner-section select {
   border: none;
-  font-size: 1rem;
+  font-size: 2rem;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
   transition: box-shadow 300ms ease;
 }
