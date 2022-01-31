@@ -2,25 +2,14 @@
 
 :root {
   --color-primary: #7380ec;
-  --color-danger: #dc143c;
-  --color-success: #41f1b6;
-  --color-warning: #ffbb55;
   --color-white: #ffffff;
-  --color-info-dark: #7d8da1;
-  --color-info-light: #dce1eb;
   --color-dark: #363949;
   --color-light: rgba(132, 139, 200, 0.18);
-  --color-primary-variant: #111e88;
   --color-dark-variant: #677483;
   --color-background: #f6f6f9;
 
   --card-border-radius: 2rem;
-  --border-radius-1: 0.4rem;
-  --border-radius-2: 0.8rem;
-  --border-radius-3: 1.2rem;
-
   --card-padding: 1.8rem;
-  --padding-1: 1.2rem;
 
   --box-shadow: 0 2rem 3rem var(--color-light);
 }
@@ -70,9 +59,14 @@ h3 {
   margin-bottom: 5px;
 }
 
-h4, p, label, select {
+h4, p, label {
   font-family: 'Roboto Slab', serif;
   color: var(--color-dark);
+}
+
+select {
+  font-family: 'Roboto Slab', serif;
+  color: #363949;
 }
 
 hr {
@@ -230,12 +224,12 @@ li {
 #hero-section h1 {
   margin: 10px 0 40px;
   font-size: 48px;
-  color: var(--color-white);
+  color: white;
 }
 
 #hero-section h2 {
   font-weight: 300;
-  color: var(--color-white);
+  color: white;
 }
 
 #hero-section .cta {
@@ -272,10 +266,12 @@ li {
 
 
 #tuner-section h4 {
+  color: var(--color-dark);
   font-size: 3rem;
 }
 
 #tuner-section label {
+  color: var(--color-dark);
   font-size: 2rem;
 }
 
@@ -353,7 +349,7 @@ footer p {
   #header .nav-list ul {
     list-style: none;
     position: absolute;
-    background-color: var(--color-dark);
+    background-color: #363949;
     width: 100vw;
     height: 100vh;
     left: 100%;
