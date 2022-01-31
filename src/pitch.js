@@ -30,6 +30,12 @@ let isLoading = true;
 //get DPI
 let dpi = window.devicePixelRatio;
 
+// display variables
+let arcMarginTop = 20;
+let textMarginTop = 50 + arcMarginTop;
+let primaryColor = "#7380ec";
+let strokeColor = "#363949";
+
 // Perform setup once DOM is fully loaded
 document.addEventListener('DOMContentLoaded', (event) => {
     setup();
@@ -42,6 +48,8 @@ startButton.addEventListener("click", () => {
     startTuner();
 });
 
+// Clamp function
+const clamp = (num, min, max) => Math.min(Math.max(num, min), max);
 
 // Performs setup by grabbing all things required by ml5.js
 async function setup() {
@@ -135,28 +143,39 @@ function listenForPitch() {
     });
 }
 
+// Kicks of animation loop
 function draw() {
     requestAnimationFrame(draw);
     drawTuner();
 }
 
-
-let textMarginTop = 50;
-// Draws information on the Tuner canvas
 function drawTuner() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     drawStaticElements();
+    drawDynamicElements();
+}
 
+function drawStaticElements() {
+    ctx.beginPath();
+    ctx.arc(canvas.width / 2, canvas.height / 2 + arcMarginTop, (canvas.width / 4), Math.PI, 0, false);
+    ctx.strokeStyle = strokeColor;
+    ctx.lineWidth = 4;
+    ctx.stroke();
+}
+
+function drawDynamicElements() {
+    // Settings
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
     ctx.font = "48px Roboto";
 
+    // Draw
     if (isLoading) {
         ctx.fillText("LOADING", canvas.width / 2, canvas.height / 2 + textMarginTop);
     } else {
-        let strokeStyle = (Math.abs(offset) < 0.3) ? "#7380ec" : "#494949";
-        let fillStyle = (Math.abs(offset) < 0.3) ? "#7380ec" : "white";
+        let strokeStyle = (Math.abs(offset) < 0.3) ? primaryColor : strokeColor;
+        let fillStyle = (Math.abs(offset) < 0.3) ? primaryColor : "white";
 
         ctx.fillStyle = fillStyle;
         ctx.strokeStyle = strokeStyle;
@@ -168,21 +187,12 @@ function drawTuner() {
     }
 }
 
-function drawStaticElements() {
-    ctx.beginPath();
-    ctx.arc(canvas.width / 2, canvas.height / 2, (canvas.width / 4), Math.PI, 0, false);
-    ctx.strokeStyle = "#494949";
-    ctx.lineWidth = 4;
-    ctx.stroke();
-}
-
-const clamp = (num, min, max) => Math.min(Math.max(num, min), max);
-
+// Draws the pointer by using the current offset as an angle
 function drawPointer(currentOffset) {
     currentOffset = clamp(currentOffset, -30, 30);
     ctx.save();
     ctx.beginPath();
-    ctx.translate(canvas.width / 2, canvas.height / 2);
+    ctx.translate(canvas.width / 2, canvas.height / 2 + arcMarginTop);
     ctx.rotate(-180 * Math.PI / 180);
     ctx.rotate((currentOffset * 3) * Math.PI / 180);
     ctx.moveTo(0, 0);
@@ -192,6 +202,7 @@ function drawPointer(currentOffset) {
     ctx.restore();
 }
 
+// fixes the DPI issues of a canvas that is rescaled via CSS
 function fixDPI() {
     //get CSS height & width
     //the slice method gets rid of "px"
@@ -203,6 +214,7 @@ function fixDPI() {
     canvas.setAttribute('width', style_width * dpi);
 }
 
+// gets called when loading is finished
 function setLoadingDone() {
     isLoading = false;
 }
