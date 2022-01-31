@@ -251,6 +251,10 @@ li {
   max-width: 1200px;
 }
 
+#tuner-section .tuner-top p {
+  font-size: 1.5rem;
+}
+
 #tuner-section .tuner-bottom {
   display: flex;
   flex-direction: row;
