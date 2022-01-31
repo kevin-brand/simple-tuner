@@ -140,36 +140,64 @@ function draw() {
     drawTuner();
 }
 
+
+let textMarginTop = 50;
 // Draws information on the Tuner canvas
 function drawTuner() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    drawStaticElements();
 
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
     ctx.font = "48px Roboto";
 
     if (isLoading) {
-        ctx.fillText("LOADING", canvas.width / 2, canvas.height / 2);
+        ctx.fillText("LOADING", canvas.width / 2, canvas.height / 2 + textMarginTop);
     } else {
-        let strokeStyle = (Math.abs(offset) < 0.3) ? "chartreuse" : "#494949";
-        let fillStyle = (Math.abs(offset) < 0.3) ? "chartreuse" : "white";
+        let strokeStyle = (Math.abs(offset) < 0.3) ? "#7380ec" : "#494949";
+        let fillStyle = (Math.abs(offset) < 0.3) ? "#7380ec" : "white";
 
         ctx.fillStyle = fillStyle;
         ctx.strokeStyle = strokeStyle;
-        ctx.linewidth = 5;
-
-        ctx.fillText(offset.toString(), canvas.width / 2, canvas.height / 2);
-        ctx.strokeText(offset.toString(), canvas.width / 2, canvas.height / 2);
+        drawPointer(offset);
+        
+        ctx.lineWidth = 1;
+        ctx.fillText(offset.toString(), canvas.width / 2, canvas.height / 2 + textMarginTop);
+        ctx.strokeText(offset.toString(), canvas.width / 2, canvas.height / 2 + textMarginTop);
     }
 }
 
+function drawStaticElements() {
+    ctx.beginPath();
+    ctx.arc(canvas.width / 2, canvas.height / 2, (canvas.width / 4), Math.PI, 0, false);
+    ctx.strokeStyle = "#494949";
+    ctx.lineWidth = 4;
+    ctx.stroke();
+}
+
+const clamp = (num, min, max) => Math.min(Math.max(num, min), max);
+
+function drawPointer(currentOffset) {
+    currentOffset = clamp(currentOffset, -30, 30);
+    ctx.save();
+    ctx.beginPath();
+    ctx.translate(canvas.width / 2, canvas.height / 2);
+    ctx.rotate(-180 * Math.PI / 180);
+    ctx.rotate((currentOffset * 3) * Math.PI / 180);
+    ctx.moveTo(0, 0);
+    ctx.lineTo(0, (canvas.width / 4) - 20);
+    ctx.stroke();
+    ctx.closePath();
+    ctx.restore();
+}
+
 function fixDPI() {
-    //get CSS height
-    //the + prefix casts it to an integer
+    //get CSS height & width
     //the slice method gets rid of "px"
     let style_height = +getComputedStyle(canvas).getPropertyValue("height").slice(0, -2);
-    //get CSS width
     let style_width = +getComputedStyle(canvas).getPropertyValue("width").slice(0, -2);
+
     //scale the canvas
     canvas.setAttribute('height', style_height * dpi);
     canvas.setAttribute('width', style_width * dpi);
