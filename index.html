@@ -54,6 +54,15 @@
         <div class="tuner-bottom">
           <div class="left tuner-bottom-col">
             <h4>Settings</h2>
+            <div class="settings">
+              <div class="theme-toggle">
+                <label for="switch">Toggle Dark Theme:</label>
+                <label class="switch">
+                  <input type="checkbox">
+                  <span class="slider round" id="theme-toggle"></span>
+                </label>
+              </div>
+
               <div class="select-option">
                 <label for="target-note-selection">Target Note:</label>
                 <select id="target-note-selection" name="target-note-selection">
@@ -86,17 +95,9 @@
                   <option value="8">8</option>
                 </select>
               </div>
-              
-              <div class="theme-toggle">
-                <label for="switch">Toggle Theme:</label>
-                <label class="switch">
-                  <input type="checkbox">
-                  <span class="slider round" id="theme-toggle"></span>
-                </label>
-              </div>
-              
+            </div>
 
-              <button type="button" class="cta" id="tuner-start-button">Start Tuner</button>
+            <button type="button" class="cta" id="tuner-start-button">Start Tuner</button>
           </div>
           
           <div class="right tuner-bottom-col">

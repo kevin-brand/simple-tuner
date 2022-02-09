@@ -94,7 +94,6 @@ li {
 }
 
 .cta {
-
   display: inline-block;
   padding: 10px 30px;
   color: var(--color-dark);
@@ -328,6 +327,10 @@ input:checked + .slider:before {
 
 #tuner-section .tuner-bottom-col {
   flex-basis: 48%;
+}
+
+#tuner-section .settings {
+  text-align: left;
 }
 
 
